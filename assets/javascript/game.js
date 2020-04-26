@@ -23,7 +23,7 @@ function renderLetter() {
 
 function resetGuesses() {
     guessesLeft = 9;
-    guessesLeft = '';
+    userGuesses = ' ';
 }
   
 // Function that updates the score and other variables
@@ -62,10 +62,9 @@ document.onkeyup = function (event) {
         updateScore();
     }
 
-    // If there are no more guesses left, reset the game.
+    // If there are no more guesses left, resets the game.
     if (guessesLeft == 0) {
         loses++;
-        updateScore();
         alert("You Lost! >:)");
         resetGuesses();
         updateScore();
